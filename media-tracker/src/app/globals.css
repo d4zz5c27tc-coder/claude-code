@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Farb-Tokens: hell als Standard, dunkel per Systemeinstellung */
+:root {
+  --background: #f7f7f8;
+  --foreground: #18181b;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --border: #e4e4e7;
+  --muted: #71717a;
+  --accent: #4f46e5;
+  --accent-foreground: #ffffff;
+  --success: #15803d;
+  --danger: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0b0f;
+    --foreground: #ececf1;
+    --surface: #15151b;
+    --surface-raised: #1b1b23;
+    --border: #2a2a35;
+    --muted: #9a9aab;
+    --accent: #818cf8;
+    --accent-foreground: #0b0b0f;
+    --success: #4ade80;
+    --danger: #f87171;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
